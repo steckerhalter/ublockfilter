@@ -1,0 +1,5 @@
+! Title: steckerhalter's filters for ublock
+! Description: He who seeks, shall find
+
+! filter out all ads that have at least 1 bid
+www.ricardo.ch##div[data-testid="regular-results"] div > a:has-text(/[1-9] Gebote?/):style(display: none !important;)
