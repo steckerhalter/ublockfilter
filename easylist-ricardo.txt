@@ -3,4 +3,5 @@
 
 ! display only entries with 0 bids, use a query that has offer_type=auction
 ! example search query: https://www.ricardo.ch/de/c/uhren-81990/?attribute_groups.watch_type=5217%2C5558%2C5148%2C5631%2C5353&range_filters.price.max=30&sort=close_to_end&offer_type=auction
-www.ricardo.ch##div[data-testid="regular-results"] div > a:has-text(/[1-9] Gebote?/)
+www.ricardo.ch##a:has-text(/[1-9] Gebote?/)
+www.ricardo.ch##a:has-text(Beliebt)
