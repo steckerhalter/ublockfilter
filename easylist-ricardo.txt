@@ -1,7 +1,10 @@
 ! Title: ricardo.ch filter list
-! Description: he who seeks, shall find
+! Description: show only entries that have no bids yet
 
-! display only entries with 0 bids, use a query that has offer_type=auction
-! example search query: https://www.ricardo.ch/de/c/uhren-81990/?attribute_groups.watch_type=5217%2C5558%2C5148%2C5631%2C5353&range_filters.price.max=30&sort=close_to_end&offer_type=auction
+! example search query for ricardo.ch:
+! https://www.ricardo.ch/de/c/uhren-81990/?attribute_groups.watch_type=5217%2C5558%2C5148%2C5631%2C5353&range_filters.price.max=30&sort=close_to_end&offer_type=auction
+
+! remove entries with bids
 www.ricardo.ch##a:has-text(/[1-9] Gebote?/)
+! remove "ads" ricardo inserts marked "Beliebt"
 www.ricardo.ch##a:has-text(Beliebt)
